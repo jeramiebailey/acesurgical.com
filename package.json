@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-ecommerce",
-  "description": "Gatsby starter ecommerce",
-  "version": "2.0.0",
-  "author": "Parminder Sanghera",
+  "name": "gatsby-ecommerce",
+  "description": "Gatsby ecommerce",
+  "version": "1.0.0",
+  "author": "JB",
   "bugs": {
-    "url": "https://github.com/parmsang/gatsby-starter-ecommerce"
+    "url": ""
   },
   "dependencies": {
     "@moltin/gatsby-source-moltin": "^1.9.1",
@@ -75,7 +75,7 @@
     "url": "git+https://github.com/parmsang/gatsby-starter-ecommerce.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "npm run develop",
     "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
