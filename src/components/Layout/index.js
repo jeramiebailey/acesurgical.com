@@ -10,7 +10,7 @@ const Layout = ({location, children}) => (
     <Headroom
       upTolerance={10}
       downTolerance={10}
-      style={{zIndex: '20', height: '6.5em'}}
+      style={{zIndex: '20', height: '3.5em'}}
     >
       <Header location={location} />
     </Headroom>

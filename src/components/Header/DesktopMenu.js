@@ -12,7 +12,7 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
   }, [pathname])
 
   return (
-    <Menu size="huge" borderless pointing>
+    <Menu size="huge" borderless pointing style={{backgroundColor: '#0097d6'}}>
       <Container text>
         <Menu.Item
           active={activeItem === withPrefix('/')}
@@ -20,8 +20,8 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
           to="/"
           header
         >
-          <Logo />
-          Starter Store
+          {/*<Logo />*/}
+          {/*Starter Store*/}
         </Menu.Item>
         {token ? (
           <Menu.Menu position="right">
@@ -29,18 +29,21 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
               as={Link}
               to="/myaccount/"
               active={activeItem === withPrefix('/myaccount/')}
+              style={{color: 'white'}}
             >
               <Icon name="user" />
               My Account
             </Menu.Item>
-            <Menu.Item onClick={signout}>Sign out</Menu.Item>
-            <Menu.Item
-              as={Link}
-              to="/cart/"
-              active={activeItem === withPrefix('/cart/')}
-            >
-              <ShoppingCartIcon cartCount={cartCount} name="Cart" />
-            </Menu.Item>
+            <Menu.Item style={{color: 'white'}}>Contact US</Menu.Item>
+            {/*<Menu.Item*/}
+            {/*  as={Link}*/}
+            {/*  to="/cart/"*/}
+            {/*  active={activeItem === withPrefix('/cart/')}*/}
+            {/*  style={{color: 'white'}}*/}
+            {/*>*/}
+            {/*  <ShoppingCartIcon cartCount={cartCount} name="Cart" />*/}
+            {/*</Menu.Item>*/}
+            <Menu.Item onClick={signout} style={{color: 'white'}}>CREATE AN ACCOUNT</Menu.Item>
           </Menu.Menu>
         ) : (
           <Menu.Menu position="right">
