@@ -12,17 +12,17 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
   }, [pathname])
 
   return (
-    <Menu size="huge" borderless pointing style={{backgroundColor: '#0097d6'}}>
+    <Menu size="huge" borderless pointing color='#0097d6'>
       <Container text>
-        <Menu.Item
-          active={activeItem === withPrefix('/')}
-          as={Link}
-          to="/"
-          header
-        >
-          {/*<Logo />*/}
-          {/*Starter Store*/}
-        </Menu.Item>
+        {/*<Menu.Item*/}
+        {/*  active={activeItem === withPrefix('/')}*/}
+        {/*  as={Link}*/}
+        {/*  to="/"*/}
+        {/*  header*/}
+        {/*>*/}
+          {/* <Logo /> */}
+          {/* Starter Store */}
+        {/*</Menu.Item>*/}
         {token ? (
           <Menu.Menu position="right">
             <Menu.Item
@@ -35,25 +35,21 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
               My Account
             </Menu.Item>
             <Menu.Item style={{color: 'white'}}>Contact US</Menu.Item>
-            {/*<Menu.Item*/}
-            {/*  as={Link}*/}
-            {/*  to="/cart/"*/}
-            {/*  active={activeItem === withPrefix('/cart/')}*/}
-            {/*  style={{color: 'white'}}*/}
-            {/*>*/}
-            {/*  <ShoppingCartIcon cartCount={cartCount} name="Cart" />*/}
-            {/*</Menu.Item>*/}
-            <Menu.Item onClick={signout} style={{color: 'white'}}>CREATE AN ACCOUNT</Menu.Item>
+            {/* <Menu.Item */}
+            {/*  as={Link} */}
+            {/*  to="/cart/" */}
+            {/*  active={activeItem === withPrefix('/cart/')} */}
+            {/*  style={{color: 'white'}} */}
+            {/* > */}
+            {/*  <ShoppingCartIcon cartCount={cartCount} name="Cart" /> */}
+            {/* </Menu.Item> */}
+            <Menu.Item onClick={signout} style={{color: 'white'}}>
+              CREATE AN ACCOUNT
+            </Menu.Item>
           </Menu.Menu>
         ) : (
           <Menu.Menu position="right">
-            <Menu.Item
-              as={Link}
-              to="/register/"
-              active={activeItem === withPrefix('/register/')}
-            >
-              Sign up
-            </Menu.Item>
+            <Menu.Item style={{color: 'white'}}>Contact US</Menu.Item>
             <Menu.Item
               as={Link}
               to="/login/"
@@ -61,12 +57,20 @@ const DesktopMenu = ({location: {pathname}, token, cartCount, signout}) => {
             >
               Sign in
             </Menu.Item>
+            {/*<Menu.Item*/}
+            {/*  as={Link}*/}
+            {/*  to="/cart/"*/}
+            {/*  active={activeItem === withPrefix('/cart/')}*/}
+            {/*>*/}
+            {/*  <ShoppingCartIcon cartCount={cartCount} name="Cart" />*/}
+            {/*</Menu.Item>*/}
             <Menu.Item
               as={Link}
-              to="/cart/"
-              active={activeItem === withPrefix('/cart/')}
+              to="/register/"
+              active={activeItem === withPrefix('/register/')}
+              style={{color: 'white'}}
             >
-              <ShoppingCartIcon cartCount={cartCount} name="Cart" />
+              CREATE AN ACCOUNT
             </Menu.Item>
           </Menu.Menu>
         )}
