@@ -65,20 +65,20 @@ const StoreIndex = ({location}) => {
           }}
         >
           <Image src={logo} alt="logo" />
-          <div className="ui fluid input">
-            <input
-              id="search"
-              name="search"
-              type="search"
-              value=""
-              placeholder="Search..."
-            />
-            <ShoppingCartIcon name="Cart" />
-          </div>
+          {/*<div className="ui fluid input">*/}
+          {/*  <input*/}
+          {/*    id="search"*/}
+          {/*    name="search"*/}
+          {/*    type="search"*/}
+          {/*    value=""*/}
+          {/*    placeholder="Search..."*/}
+          {/*  />*/}
+          {/*  <ShoppingCartIcon name="Cart" />*/}
+          {/*</div>*/}
         </Header.Content>
         <Menu size="huge" borderless pointing color="#0097d6">
           <Container text>
-            <Menu.Menu position="center">
+            <Menu.Menu position="right">
               <Menu.Item
                 style={{color: '#0097d6', fontSize: '15px', fontWeight: 900}}
               >
